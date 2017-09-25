@@ -192,7 +192,14 @@ video {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: opacity 2s;
+  -webkit-transition: opacity 2;
+  -moz-transition: opacity 2s;
 }
+.bubble:hover {
+  opacity: 0.3;
+}
+
 .bubble i {
   color: #15161A;
   font-family: 'fontawesome';
@@ -202,4 +209,45 @@ video {
 .indiv.gray p{
   color: #efefef;
   text-align: center;
+}
+
+.live {
+  width: 50px;
+  vertical-align: middle;
+}
+.resume {
+  width: 100vw;
+  background: #fff;
+}
+
+.content {
+  max-width: 70%;
+  display: block;
+  margin: auto;
+}
+
+.content * {
+  text-align: left;
+}
+.exp div:first-child{
+  width: 100%;
+}
+
+.exp div:first-child h2 {
+  float: left;
+}
+.exp div:first-child h3{
+  float: right;
+}
+.exp *{
+  display: inline-block;
+}
+
+.exp p {
+  margin-bottom: 40px;
+}
+.content ul li {
+  list-style: lower-roman;
+  margin: 20px 0;
+  display: list-item;
 }

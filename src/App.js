@@ -5,6 +5,8 @@ import {NotFound} from './NotFound'
 import {Resume} from './Resume' 
 import {Contact} from './Contact'
 import {Blog} from './Blog'
+import {Header} from './Header'
+import {Footer} from './Footer'
 
 export const App = () => (
   <div>
@@ -17,5 +19,6 @@ export const App = () => (
         <Route path='*' component={NotFound} />
       </Switch>
     </main>
+    <Footer />
   </div>
 )

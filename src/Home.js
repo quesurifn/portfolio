@@ -3,6 +3,7 @@ import './App.css';
 import './css/gallery.css'
 
 import {Link} from 'react-router-dom'
+import {Header} from './Header'
 
 import node from './images/nodejs-icon.svg'
 import vue from './images/vue-9.svg'
@@ -10,6 +11,9 @@ import rails from './images/rails.svg'
 import postgres from './images/postgresql.svg'
 import react from './images/react.svg'
 import redux from './images/redux.svg'
+import router from './images/react-router.svg'
+import live from './images/LIVE.png'
+import websocket from './images/websocket.svg'
 
 export class Home extends Component {
     constructor() {
@@ -17,10 +21,12 @@ export class Home extends Component {
       
       this.domehaUpdate = this.domehaUpdate.bind(this)
       this.guardianUpdate = this.guardianUpdate.bind(this)
+      this.trumpUpdate = this.trumpUpdate.bind(this)
 
       this.state = {
         domeha: '',
-        guardian: ''
+        guardian: '',
+        trump: ''
       }
     }
   
@@ -31,7 +37,6 @@ export class Home extends Component {
 
   domehaUpdate() {
     let time = this.refs.domeha.currentTime
-    console.log(time)
     if (time < 13) {
       this.setState({domeha: 'A beautiful homepage with clever z-indexing'})
     } else if (time < 26 && time > 9){ 
@@ -44,11 +49,23 @@ export class Home extends Component {
   }
 
   guardianUpdate() {
-
+    let time = this.refs.guardian.currentTime
+    console.log(time)
+    if (time < 5) {
+      this.setState({guardian: 'Amazing design by @franchino'})
+    } else if (time > 5 && time < 10) {
+      this.setState({guardian: 'Embedded HTML5 Video'})
+    } else if (time > 10 && time < 30) {
+      this.setState({guardian: 'Beautiful photography that loads quickly thanks to React\'s Service Workers'})
+    } else if (time > 30 && time < 44) {
+      this.setState({guardian: 'Routed Slide Show all CSS no javascript'})
+    }
   }
 
+  trumpUpdate() {
+    this.setState({trump: 'LIVE Trump Dashboard'})
+  }
   
-
 
   render() {
   
@@ -56,17 +73,8 @@ export class Home extends Component {
       <div className="home">
          <div className='container'>
              <div className='main'>
-                <h1>Kyle C R Fahey</h1>
-                <h2>Full-Stack Developer &amp; Growth Hacker</h2>
-                <div className='links-box'>
-                    <Link to='/'>Home</Link>
-                    <Link to='/resume'>Résumé</Link>
-                    <Link to='/blog'>Blog</Link>
-                    <Link to='/contact'>Contact</Link>
-                </div>
-
-
-                <h3>September 2017</h3>
+                <Header />
+                <h3>Fall 2017</h3>
                 <h4 style={{margin: '10px 0 40px 0'}}>React, Redux and an awesome UX</h4>
 
                 <div className='domeha'>
@@ -78,7 +86,7 @@ export class Home extends Component {
                     <figure className="item">
                       <div className='overlay'>
                         <p>{this.state.guardian}</p>
-                        <video autoPlay loop onTimeUpdate={this.domehaUpdate} ref='domeha'>
+                        <video autoPlay loop ref='guardian' onTimeUpdate={this.guardianUpdate}>
                           <source src='https://s3-us-west-2.amazonaws.com/quesoportfolio/guardian.mp4' type='video/mp4' /> 
                         </video>
                       </div>
@@ -111,18 +119,23 @@ export class Home extends Component {
 
                     <div className='indiv'>
                       <img src={react} alt='react' />
-                      <p>React.js</p>
+                      <p>React</p>
                     </div>
                     <div className='indiv'>
-                      <img src={redux} alt='react' />
-                      <p>Redux.js</p>
+                      <img src={redux} alt='redux' />
+                      <p>Redux</p>
                     </div>
+                    <div className='indiv'>
+                      <img src={router} alt='react-router' />
+                      <p>React-Router v4</p>
+                    </div>
+                    
                   </div>
                 </div>
                 
                 <div className='divider'></div>
 
-                <h3>MARCH 2017</h3>
+                <h3>Spring 2017</h3>
                 <h4 style={{margin: '10px 0 40px 0'}}>E-Commerce, Blog, Dynamic Page Creation, Google Analytics Heaven</h4>
 
                 <div className='domeha'>
@@ -134,7 +147,7 @@ export class Home extends Component {
                     <figure className="item">
                       <div className='overlay'>
                         <p>{this.state.domeha}</p>
-                        <video autoPlay loop onTimeUpdate={this.domehaUpdate} ref='domeha'>
+                        <video autoPlay loop onTimeUpdateCapture={this.domehaUpdate} ref='domeha'>
                           <source src='https://s3-us-west-2.amazonaws.com/quesoportfolio/combined.mp4' type='video/mp4' /> 
                         </video>
                       </div>
@@ -180,10 +193,67 @@ export class Home extends Component {
                     </div>
                   </div>
                 </div>
-                
 
-                
+                <div className='divider'></div>
 
+                <h3>Summer 2017</h3>
+                <h4 style={{margin: '10px 0 40px 0'}}><img src={live} alt='live' className='live' /> Trump Sentimenter</h4>
+
+                <div className='domeha'>
+                  <div className="gallery items-3">
+                    <div id="item-1" className="control-operator"></div>
+                    <div id="item-2" className="control-operator"></div>
+                    <div id="item-3" className="control-operator"></div>
+
+                    <figure className="item">
+                      <div className='overlay'>
+                        <p>{this.state.trump}</p>
+                        <video autoPlay loop ref='trump' onTimeUpdate={this.trumpUpdate}>
+                          <source src='https://s3-us-west-2.amazonaws.com/quesoportfolio/trump.mp4' type='video/mp4' /> 
+                        </video>
+                      </div>
+
+                    </figure>
+
+                    <figure className="item">
+                      <h1>2</h1>
+                    </figure>
+
+                    <figure className="item">
+                      <h1>3</h1>
+                    </figure>
+
+                    <div className="controls">
+                      <a href="#item-1" className="control-button">•</a>
+                      <a href="#item-2" className="control-button">•</a>
+                      <a href="#item-3" className="control-button">•</a>
+                    </div>
+                  </div>
+
+                </div>
+                <div className='stack'>
+                  <h2>THE STACK</h2>
+                  <div className='stack-flex'>
+                    <div className='indiv'>
+                      <img src={node} alt='node' />
+                      <p>Node.js</p>
+                    </div>
+                    <div className='indiv'>
+                      <img src={react} alt='react' />
+                      <p>React</p>
+                    </div>
+                    <div className='indiv'>
+                      <img src={router} alt='react-router' />
+                      <p>React-Router v3</p>
+                    </div>
+                    <div className='indiv'>
+                      <img src={websocket} alt='react-router' />
+                      <p>Websockets</p>
+                    </div>
+                    
+                    
+                  </div>
+                </div>
             </div>
          </div>
       </div>   
