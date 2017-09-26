@@ -80,7 +80,7 @@ export class Home extends Component {
                 <Header />
                 <h3>Fall 2017</h3>
                 <h4 style={{margin: '10px 0 40px 0'}}>React, Redux and an awesome UX</h4>
-
+                <a href='http://getguardian.com'>getguardian.com</a>
                 <div className='domeha'>
                   <div className="gallery items-3">
                     <div id="item-1" className="control-operator"></div>
@@ -107,12 +107,11 @@ export class Home extends Component {
 
                     <div className="controls">
                       <a href="#item-1" className="control-button">•</a>
-                      <a href="#item-2" className="control-button">•</a>
-                      <a href="#item-3" className="control-button">•</a>
                     </div>
                   </div>
 
                 </div>
+                
                 <div className='stack'>
                   <h2>THE STACK</h2>
                   <div className='stack-flex'>
@@ -140,10 +139,12 @@ export class Home extends Component {
                 <div className='divider'></div>
 
                 <h3>Spring 2017</h3>
+                
+                
                 <h4 style={{margin: '10px 0 40px 0'}}>E-Commerce, Blog, Dynamic Page Creation, Google Analytics Heaven</h4>
-
+                <a href='http://domeha.com'>domeha.com</a>
                 <div className='domeha'>
-                  <div className="gallery items-3">
+                  <div className="gallery items-2">
                     <div id="item-1" className="control-operator"></div>
                     <div id="item-2" className="control-operator"></div>
                     <div id="item-3" className="control-operator"></div>
@@ -158,18 +159,10 @@ export class Home extends Component {
 
                     </figure>
 
-                    <figure className="item">
-                      <h1>2</h1>
-                    </figure>
 
-                    <figure className="item">
-                      <h1>3</h1>
-                    </figure>
 
                     <div className="controls">
                       <a href="#item-1" className="control-button">•</a>
-                      <a href="#item-2" className="control-button">•</a>
-                      <a href="#item-3" className="control-button">•</a>
                     </div>
                   </div>
 
