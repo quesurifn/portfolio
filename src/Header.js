@@ -8,7 +8,7 @@ export class Header extends Component {
 
              <div className='header'>
                 <h1>Kyle C R Fahey</h1>
-                <h2>Full-Stack Developer &amp; Growth Hacker</h2>
+                <h2>Full-Stack Developer</h2>
                 <div className='links-box'>
                     <Link to='/'>Home</Link>
                     <Link to='/resume'>Résumé</Link>
