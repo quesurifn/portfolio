@@ -14,6 +14,8 @@ import redux from './images/redux.svg'
 import router from './images/react-router.svg'
 import live from './images/LIVE.png'
 import websocket from './images/websocket.svg'
+import jquery from './images/jquery-2.svg'
+import js from './images/javascript.svg'
 
 export class Home extends Component {
     constructor() {
@@ -32,6 +34,8 @@ export class Home extends Component {
   
   componentDidMount() {
       document.querySelector('body').style.backgroundColor = '#15161a'
+      document.querySelector('footer').style.display = 'block'
+  
   }
 
 
@@ -254,6 +258,64 @@ export class Home extends Component {
                     
                   </div>
                 </div>
+
+                                <div className='divider'></div>
+
+                <h3>Fall 2016</h3>
+
+                <h4 style={{margin: '10px 0 40px 0'}}>Etch-A-Sketch</h4>
+
+                <div className='domeha'>
+                  <div className="gallery items-3">
+                    <div id="item-1" className="control-operator"></div>
+                    <div id="item-2" className="control-operator"></div>
+                    <div id="item-3" className="control-operator"></div>
+
+                    <figure className="item">
+                      <div className='overlay'>
+                        <p>Throwback</p>
+                        <video autoPlay loop>
+                          <source src='https://s3-us-west-2.amazonaws.com/quesoportfolio/Etch-A-Sketch.mp4' type='video/mp4' /> 
+                        </video>
+                      </div>
+
+                    </figure>
+
+                    <figure className="item">
+                      <h1>2</h1>
+                    </figure>
+
+                    <figure className="item">
+                      <h1>3</h1>
+                    </figure>
+
+                    <div className="controls">
+                      <a href="#item-1" className="control-button">•</a>
+                      <a href="#item-2" className="control-button">•</a>
+                      <a href="#item-3" className="control-button">•</a>
+                    </div>
+                  </div>
+
+                </div>
+                <div className='stack'>
+                  <h2>THE STACK</h2>
+                  <div className='stack-flex'>
+                    <div className='indiv'>
+                      <img src={jquery} alt='jquery' />
+                      <p>jQuery</p>
+                    </div>
+                    <div className='indiv'>
+                      <img src={js} alt='js' />
+                      <p>Javascript</p>
+                    </div>
+                 
+                    
+                    
+                  </div>
+                </div>
+
+
+
             </div>
          </div>
       </div>   

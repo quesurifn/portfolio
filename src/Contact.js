@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 
 export class Contact extends Component {
+
+  componentDidMount() {
+      document.querySelector('footer').style.display = 'none'
+  }
   render() {
     return (
       <div className="notfound">

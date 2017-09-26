@@ -3,6 +3,9 @@ import {Header} from './Header'
 import './App.css';
 
 export class Resume extends Component {
+  componentDidMount() {
+    document.querySelector('footer').style.display = 'block'
+  }
   render() {
     return (
       <div className="resume">
@@ -204,14 +207,14 @@ export class Resume extends Component {
                   </p>
               </div>
 
-
-
-
-
           
             </div>
           </div>
         </div>
+          <div className='divider'></div>
+
+
+          <a onClick={() => window.open('https://s3-us-west-2.amazonaws.com/quesoportfolio/Resume.pdf', '_blank')} className='download-resume'>Download PDF</a>
       </div>
 
 
