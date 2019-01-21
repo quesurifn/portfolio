@@ -24,6 +24,7 @@ export class Contact extends Component {
 
   }
   render() {
+    const {location} = this.state
     return (
       <div className="notfound">
 

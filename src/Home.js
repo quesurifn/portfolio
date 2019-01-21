@@ -80,7 +80,7 @@ export class Home extends Component {
   
 
   render() {
-  
+    const {location} = this.state
     return (
       <div className="home">
 
