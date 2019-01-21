@@ -28,13 +28,21 @@ export class Home extends Component {
       this.state = {
         domeha: '',
         guardian: '',
-        trump: ''
+        trump: '',
+        location: null
       }
     }
   
   componentDidMount() {
       document.querySelector('body').style.backgroundColor = '#15161a'
       document.querySelector('footer').style.display = 'block'
+
+      axios.get('http://api.ipstack.com/check?access_key=b87455b25082384dd1160eab0c5ef2c1')
+      .then((response) => {
+        if(response.region_code) {
+          this.setState({location: response.region_code})
+        }
+      })
   
   }
 
@@ -75,6 +83,12 @@ export class Home extends Component {
   
     return (
       <div className="home">
+
+      {location === "SC" || location === "NC" ? (
+
+      <div>You are not authorized to visit this website.</div>
+
+      ) : (
          <div className='container'>
              <div className='main'>
                 <Header />
@@ -311,6 +325,7 @@ export class Home extends Component {
 
             </div>
          </div>
+      )}
       </div>   
     );
   }

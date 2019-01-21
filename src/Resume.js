@@ -1,14 +1,39 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import {Header} from './Header'
 import './App.css';
 
 export class Resume extends Component {
+  constructor() {
+    super()
+
+
+    this.state = {
+      location: null
+    }
+  }
+
   componentDidMount() {
     document.querySelector('footer').style.display = 'block'
+
+    axios.get('http://api.ipstack.com/check?access_key=b87455b25082384dd1160eab0c5ef2c1')
+    .then((response) => {
+      if(response.region_code) {
+        this.setState({location: response.region_code})
+      }
+    })
   }
   render() {
+    const {location} = this.state
+
     return (
       <div className="resume">
+
+      {location === "SC" || location === "NC" ? (
+
+        <div>You are not authorized to visit this website.</div>
+
+      ) : (
         <div className='home'>
           <div className='container'>
             <div className='main'>
@@ -215,9 +240,10 @@ export class Resume extends Component {
 
 
           <a onClick={() => window.open('https://s3-us-west-2.amazonaws.com/quesoportfolio/Resume.pdf', '_blank')} className='download-resume'>Download PDF</a>
+          
       </div>
 
-
+      )}
       </div>   
     );
   }

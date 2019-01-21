@@ -3,12 +3,36 @@ import './App.css';
 
 export class Contact extends Component {
 
+    constructor() {
+        super()
+
+        this.state = {
+            location: null
+        }
+    }
+
   componentDidMount() {
-      document.querySelector('footer').style.display = 'none'
+      document.querySelector('footer').style.display = 'none';
+
+
+      axios.get('http://api.ipstack.com/check?access_key=b87455b25082384dd1160eab0c5ef2c1')
+      .then((response) => {
+        if(response.region_code) {
+          this.setState({location: response.region_code})
+        }
+      })
+
   }
   render() {
     return (
       <div className="notfound">
+
+        {location === "SC" || location === "NC" ? (
+
+        <div>You are not authorized to visit this website.</div>
+
+        ) : (
+        <div>
          <h1>Contact Me</h1>
 
          <div className='contact-flex'>
@@ -36,8 +60,11 @@ export class Contact extends Component {
                 <p>kylecrfahey</p>
             </div>
 
-
+            </div>
          </div>
+
+        )}
+
       </div>   
     );
   }
