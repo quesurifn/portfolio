@@ -1,9 +1,11 @@
 {
   "name": "newport1",
   "version": "0.1.0",
+  "homepage": "http://quesurifn.github.io/quesurifn.github.io",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^2.0.1",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-lazy-load": "^3.0.13",
@@ -14,6 +16,8 @@
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
