@@ -13,8 +13,6 @@ export class Contact extends Component {
 
   componentDidMount() {
       document.querySelector('footer').style.display = 'none';
-
-
       axios.get('http://api.ipstack.com/check?access_key=b87455b25082384dd1160eab0c5ef2c1')
       .then((response) => {
         if(response.region_code) {
