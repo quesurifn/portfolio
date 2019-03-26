@@ -64,7 +64,6 @@ export class Contact extends Component {
          </div>
         
         )}
-        <div id="quote-catalog-embedded" data-dont-link-back-to-qc="false" data-number-of-quotes="5" data-quote-id="null"></div>
       </div>   
     );
   }
