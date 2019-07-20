@@ -43,7 +43,7 @@ export class Resume extends Component {
 
               <div className='content' >
                 <h1>Summary</h1>
-                <p>Insightful Web Developer with leadership abilities who loves programming Restful APIs in Node just as much as he loves writing React components. Experimentation and trying new languages are my passion.</p>   
+                <p>Insightful Web Developer with leadership abilities who loves programming Restful APIs in Node just as much as he loves writing React components. Databases get me excited and experimentation and trying new languages is my passion.</p>   
 
 
 
@@ -51,8 +51,33 @@ export class Resume extends Component {
 
                 <div className='exp'>
                   <div>
+                    <h2 style={{margin: '0'}}>The Thought &amp; Expression Co.</h2>
+                    <h3 style={{margin: '0'}}>Oct. 2017 - Present</h3>
+                  </div>
+                  <p>
+                    Owning codebases, managing deployments, designing new features and tracking down data integrity issues and memory leaks.
+                  </p>
+
+                  <ul>
+                    <li>Worked 100% remote</li>
+                    <li>In charge of over 70 deployments to production</li>
+                    <li>Managed AWS infrastructure; significantly cut costs while allowing our servers to scale</li>
+                    <li>Learned PHP and started shipping features in Laravel within two weeks</li>
+                    <li>Wrote many features across multiple technologies, including Laravel, Node (Koa), React, Redux, Elasticsearch, Redis, Mongo, MySQL</li>
+                    <li>Fixed Memory Leaks across multiple code bases</li>
+                    <li>Rewrote the mySQL and PHP in many API endpoints to increase performance. Dropped memory usage on our API by 800%, CPU usage by 20%. Dropped mySQL DB connections by 200%, and DB CPU by 500%+.</li>
+                    <li>Audited our RDS mySQL slow query log and indexing to fix CPU usage without upgrading hardware</li>
+                    <li>Built out our slackbot tools to increase our staff's productivity</li>
+                    <li>Troubleshooted a project PM was ready to scrap and got it to a stable state</li>
+                    <li>Helped maintain 6 code bases, owned two of them </li>
+                    <li>Maintained substantial growth through the release of new features and ensuring stability (Revenue on the product with my most contributions was 300% in my first 12 months) - Extensively built out our Elasticsearch API using advanced ES concepts like the percolator, aggregator, scripts nested bool queries etc.</li>
+                  </ul>
+                </div>
+
+                <div className='exp'>
+                  <div>
                     <h2 style={{margin: '0'}}>Dome Home Automation</h2>
-                    <h3 style={{margin: '0'}}>Feb. 2017 - Present</h3>
+                    <h3 style={{margin: '0'}}>Feb. 2017 - Oct. 2017</h3>
                   </div>
                   <p>
                     Built a fully dynamic website managed a JSON API based CMS with Node.js, Vue.js, Express and EJS.
