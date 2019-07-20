@@ -237,6 +237,16 @@ export class Resume extends Component {
                   </p>
               </div>
 
+              <div className='exp'>
+                  <div>
+                    <h2 style={{margin: '0'}}>Udacity Nano Degree - Data Analysis</h2>
+                    <h3 style={{margin: '0'}}>2018</h3>
+                  </div>
+                  <p>
+                    Udacity Nano Degree in Data Analysis
+                  </p>
+              </div>
+
                 <div className='exp'>
                   <div>
                     <h2 style={{margin: '0'}}>Free Code Camp</h2>
